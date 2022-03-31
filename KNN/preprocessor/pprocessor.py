@@ -18,7 +18,7 @@ fish_weight = [242.0, 290.0, 340.0, 363.0, 430.0, 450.0, 500.0, 390.0, 450.0, 50
 fish_data = np.column_stack((fish_length, fish_weight))
 fish_target = np.concatenate((np.ones(35), np.zeros(14)))
 
-train_input, test_input, train_target, test_target = train_test_split(fish_data, fish_target, random_state=42)
+train_input, test_input, train_target, test_target = train_test_split(fish_data, fish_target, stratify=fish_target,random_state=42)
 
 
 mean = np.mean(train_input, axis=0) #평균
