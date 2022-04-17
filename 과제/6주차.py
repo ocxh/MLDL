@@ -26,7 +26,8 @@ knr_best = 0
 linear_best = 0
 poly_best = 0
 
-for _ in range(10):
+#샘플 데이터1에서 100번의 테스트로 각 모델별 성능 측정
+for _ in range(100):
   train_input, test_input, train_target, test_target = train_test_split(perch_length, perch_weight, train_size=0.7)
   train_input = train_input.reshape(-1, 1)
   test_input = test_input.reshape(-1, 1)
@@ -76,6 +77,7 @@ knr_best = 0 #R^2
 linear_best = 0
 poly_best = 0
 
+#샘플 데이터2에서 100번의 테스트로 각 모델별 성능 측정
 for _ in range(100):
   train_input, test_input, train_target, test_target = train_test_split(X, y, train_size=0.7)
   train_input = train_input.reshape(-1, 1)
